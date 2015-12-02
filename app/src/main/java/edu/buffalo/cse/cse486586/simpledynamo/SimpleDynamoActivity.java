@@ -13,9 +13,9 @@ public class SimpleDynamoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simple_dynamo);
-    
+
 		TextView tv = (TextView) findViewById(R.id.textView1);
-        tv.setMovementMethod(new ScrollingMovementMethod());
+		tv.setMovementMethod(new ScrollingMovementMethod());
 	}
 
 	@Override
@@ -24,9 +24,10 @@ public class SimpleDynamoActivity extends Activity {
 		getMenuInflater().inflate(R.menu.simple_dynamo, menu);
 		return true;
 	}
-	
+
 	public void onStop() {
-	    Log.v("Test", "onStop()");
+		super.onStop();
+		Log.v("Test", "onStop()");
 	}
 
 }
